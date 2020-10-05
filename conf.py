@@ -14,10 +14,11 @@
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
+import sphinx_rtd_theme
 
 # -- Project information -----------------------------------------------------
 
-project = 'n'
+project = 'Invento'
 copyright = '2020, doctut'
 author = 'doctut'
 
@@ -48,13 +49,12 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # a list of builtin themes.
 #
 #html_theme = 'alabaster'
-import sphinx_rtd_theme
 
-extensions = [
-    ...
-    "sphinx_rtd_theme",
-]
-
+#extensions = [
+#    ...
+#    "sphinx_rtd_theme",
+#]
+#
 html_theme = "sphinx_rtd_theme"
 
 # Add any paths that contain custom static files (such as style sheets) here,
