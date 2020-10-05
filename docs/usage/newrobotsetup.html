@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Steps to setup a new robot &#8212; n Invento documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Pilot - HITL" href="hitlpilot.html" />
+    <link rel="prev" title="How to setup the Freedom agent" href="freedomsetup.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="steps-to-setup-a-new-robot">
+<h1>Steps to setup a new robot<a class="headerlink" href="#steps-to-setup-a-new-robot" title="Permalink to this headline">¶</a></h1>
+<ol class="arabic">
+<li><p>Check battery voltages using a multimeter</p></li>
+<li><p>Check if there are three cables going out, two to the slamtec board including the lan cable. One goes to the motor driver board.</p></li>
+<li><p>Using another PC, log in to the modem page [Password: admin] and check the list of wireless devices and find ‘rospc’. Note down its IP address.</p></li>
+<li><p>SSH into that IP address and use the password ‘nav&lt;///’.</p></li>
+<li><p>Run the following and debug any errors.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;systemctl status nav_mitra.service&#39;</span>
+<span class="s1">&#39;systemctl status freedomrobotics.service&#39;</span>
+</pre></div>
+</div>
+</li>
+<li><p>Get the command to install Freedom from the Freedom admin and run it in a terminal. A sample command - ‘curl -sSf “<a class="reference external" href="https://api.freedomrobotics.ai/accounts/ALKJSFIJ32U4883957890485/devices/D4974622C1B99902DDB90F1B5A5/installscript?mc_token=T2bca965d0d0fd9ba2372c468&amp;mc_secret=S9ae51396b71fe686be5f8d36&amp;install_elements=webrtc&amp;auto_install_deps=true&amp;ppa_is_allowed=true">https://api.freedomrobotics.ai/accounts/ALKJSFIJ32U4883957890485/devices/D4974622C1B99902DDB90F1B5A5/installscript?mc_token=T2bca965d0d0fd9ba2372c468&amp;mc_secret=S9ae51396b71fe686be5f8d36&amp;install_elements=webrtc&amp;auto_install_deps=true&amp;ppa_is_allowed=true</a>” | python’</p></li>
+</ol>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">n</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installing_ROS.html">Setting Up ROS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mapping.html">Visualziation, Mapping and Localization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="freedomtutorials.html">Freedom Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="freedomsetup.html">How to setup the Freedom agent</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Steps to setup a new robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hitlpilot.html">Pilot - HITL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="KT_for_Pilot_HITL.html">KT for Pilot HITL</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="freedomsetup.html" title="previous chapter">How to setup the Freedom agent</a></li>
+      <li>Next: <a href="hitlpilot.html" title="next chapter">Pilot - HITL</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, doctut.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.2.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="../_sources/usage/newrobotsetup.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

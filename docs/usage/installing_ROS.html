@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Setting Up ROS &#8212; n Invento documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Visualziation, Mapping and Localization" href="mapping.html" />
+    <link rel="prev" title="Welcome to the Invento documentation!" href="../index.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="setting-up-ros">
+<h1>Setting Up ROS<a class="headerlink" href="#setting-up-ros" title="Permalink to this headline">¶</a></h1>
+<p>The following Documentation will allow you to have a better visualization process of Mapping your enviroment and Robot Navigation.</p>
+<p>Requirements: A modern Laptop with a display and UBUNTU 16.04 or more as its operating system.</p>
+<ol class="arabic simple">
+<li><p>ROS stands for ROBOT OPERATING SYSTEM, and is a popular tool among customers using our robots.</p></li>
+<li><p>Installing ROS is simple and you should be up running after following the below steps. (Mostly taken from ROS official Documentation)</p></li>
+<li><p>Open your Terminal and Run This <strong>sudo sh -c ‘echo “deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main” &gt; /etc/apt/sources.list.d/ros-latest.list’</strong></p></li>
+<li><p>In the same terminal set up your keys by running this command <strong>sudo apt-key adv –keyserver ‘hkp://keyserver.ubuntu.com:80’ –recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654</strong>.</p></li>
+<li><p>In the same terminal run <strong>sudo apt update</strong>.</p></li>
+<li><p>Great! Congrats on reaching this step. Now as a final step you will be installing ROS. Run the following Command in the same terminal <strong>sudo apt install ros-melodic-desktop-full</strong>.</p></li>
+<li><p>Once you have installed ROS, to make sure your system recognizes it all the time. Run the following two commands one at a time on the terminal <strong>echo “source /opt/ros/melodic/setup.bash” &gt;&gt; ~/.bashrc</strong> and <strong>source ~/.bashrc</strong>.</p></li>
+<li><p>Finally to Check your ROS Version by typing <strong>rosversion -d</strong> if you have no errors in your installation. You should see your installed version on the screen.</p></li>
+</ol>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">n</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Setting Up ROS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mapping.html">Visualziation, Mapping and Localization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="freedomtutorials.html">Freedom Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="freedomsetup.html">How to setup the Freedom agent</a></li>
+<li class="toctree-l1"><a class="reference internal" href="newrobotsetup.html">Steps to setup a new robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hitlpilot.html">Pilot - HITL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="KT_for_Pilot_HITL.html">KT for Pilot HITL</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="../index.html" title="previous chapter">Welcome to the Invento documentation!</a></li>
+      <li>Next: <a href="mapping.html" title="next chapter">Visualziation, Mapping and Localization</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, doctut.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.2.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="../_sources/usage/installing_ROS.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

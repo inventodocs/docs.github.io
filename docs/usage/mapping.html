@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Visualziation, Mapping and Localization &#8212; n Invento documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Freedom Tutorials" href="freedomtutorials.html" />
+    <link rel="prev" title="Setting Up ROS" href="installing_ROS.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="visualziation-mapping-and-localization">
+<h1>Visualziation, Mapping and Localization<a class="headerlink" href="#visualziation-mapping-and-localization" title="Permalink to this headline">¶</a></h1>
+<p>Great Job! On reaching to this step. In this quick tutorial, we will guide you through mapping your environment with the robot. Before you continue with the below steps, please make sure you and your Robot are connected to the same WiFi Network. Take note of the IP Address of your system as well as the Robot (whose name will be rospc). If you are unable to get the IP address of your system and the robot with the help of your system administrator. The onther way around is as follows (not recommend):</p>
+<ol class="arabic simple">
+<li><p>Open the Terminal on your laptop.</p></li>
+<li><p>Run ifconfig (if not installed, you can install it by running <strong>apt-get install net-tools</strong>)</p></li>
+<li><p>You would get three paragrahs on the terminal. Search for the paragraph titled <strong>wlan0</strong>. In that paragraph make note of inet address.</p></li>
+<li><p>Incase you are not able to find the IP address of your Robot. Unscrew the back panel of the robot connect the NUC (A black color box) to a monitor using a hdmi cabel and run steps 1,2,3 again and make note of the IP adress.</p></li>
+</ol>
+<div class="section" id="running-mapping-and-visualization">
+<h2>Running Mapping and Visualization<a class="headerlink" href="#running-mapping-and-visualization" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Turn your robot on and give it some time. You should see the LiDAR spinning after a few seconds.</p></li>
+<li><p>Once the LiDAR is spinning and you have confirmed it visually. Now its time to start the mapping.</p></li>
+<li><p>To visualize how you are mapping and making sure every corner is mapped. Download the script from the following <strong>Link</strong> and edit it to make sure it looks like this. (Replace YOUR_IP_ADDRESS with your IP address (laptop) and the ROBOT_IP_ADDRESS (with the IP address of NUC)</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>export ROS_IP= YOUR_IP_ADDRESS
+export NUC_IP= ROBOT_IP_ADDRESS
+export ROS_MASTER_URI=&quot;http://&quot;$NUC_IP&quot;:11311&quot;
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>Run the script by running ./script_name.sh (Replace the script_name with the name you have given while saving the script)</p></li>
+<li><p>Post this step you should see a visuzlization tool and in a few seconds also load up a defauly map with two arrows represnting the robot on your screen.</p></li>
+<li><p>To start mapping, open the roboremo application shared to you. Click the clear map button on the screen. In a few seconds you should see the default map being erased and an empty map starting to build.</p></li>
+<li><p>Using the roboremo, keep moving the robot slowly around the environment and watch the map being built on the visulization tool.</p></li>
+<li><p>Feel Free to clear the map, incase you feel you are not satisfied and start again.</p></li>
+<li><p>Once you are satisfied with the map of your arena. Click save map on your roboremo. This should save the map titled <strong>NEW_MAP</strong> inside the NUC automatically.</p></li>
+<li><p>Restart your Robot and to verify if your robot has learnt the new map, repet steps 1 to 5 and you should now see the robot placed in your newly mapped environment.</p></li>
+<li><p>Phew! Great job on reaching here! You are just two steps away from making your robot Move Autonomously to your desired locations.</p></li>
+</ol>
+</div>
+<div class="section" id="localization-and-navigation">
+<h2>Localization and Navigation<a class="headerlink" href="#localization-and-navigation" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple" start="0">
+<li><p>Please note all these steps will be performed on the Visualization tool.</p></li>
+<li><p>In the visualization tool on the top you should see two clickable buttons named a. 2D pose Estimate and b. 2D Nav Goal.</p></li>
+<li><p>These buttons are used for localization and Navigation respectively.</p></li>
+<li><p>Have a look where the robot is located in your environment and which direction is it facing. Once you have noted where your robot is and facing, click on the 2D pose estimate button and place your cursor on the approximate position of the robot in the map and align the direction towrards the robots facing.</p></li>
+<li><p>This should move the arrows visible on the map to an approximate position within the map which is close to the actual location of the robot on the map.</p></li>
+<li><p>Get ready for the fun part! Now choose a destination where you want your robot to navigate. Once you have made up your mind, Click on the 2D Nav goal button on your visualization tool and use the cursor to click on your desired destination. If everything goes well, you should see your robot mving to the desired location.</p></li>
+<li><p>If you ever feel the robot is moving wierd or you notice the red lines (laser points) or not aligned to the black lines (obstacles) on the visualization tool, repet step 4 again (though this happes rarley, if the robot is not pushed around).</p></li>
+</ol>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">n</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installing_ROS.html">Setting Up ROS</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Visualziation, Mapping and Localization</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#running-mapping-and-visualization">Running Mapping and Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#localization-and-navigation">Localization and Navigation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="freedomtutorials.html">Freedom Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="freedomsetup.html">How to setup the Freedom agent</a></li>
+<li class="toctree-l1"><a class="reference internal" href="newrobotsetup.html">Steps to setup a new robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hitlpilot.html">Pilot - HITL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="KT_for_Pilot_HITL.html">KT for Pilot HITL</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="installing_ROS.html" title="previous chapter">Setting Up ROS</a></li>
+      <li>Next: <a href="freedomtutorials.html" title="next chapter">Freedom Tutorials</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, doctut.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.2.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="../_sources/usage/mapping.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
